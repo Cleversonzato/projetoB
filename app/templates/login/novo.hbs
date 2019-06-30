@@ -1,0 +1,6 @@
+<AvFormulario @titulo = "Novo usuário" @botao="salvar" @model={{model}} @posEnviar={{action "posEnviar"}} >
+  <AvInput @tipo="text" @identificador="clientId" @label="Usuário" @valor={{model.clientId}} @obrigatorio="true" />
+  <AvInput @tipo="password" @identificador="clientSecret" @label="Senha" @valor={{model.clientSecret}} @obrigatorio="true" />
+  <AvInput @tipo="text" @identificador="cpf" @label="cpf" @valor={{model.cpf}} />
+  <AvInput @tipo="email" @identificador="email" @label="E-mail" @valor={{model.email}} />
+</AvFormulario>

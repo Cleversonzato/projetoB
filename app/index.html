@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>BeloAvaliator</title>
+    <title>Avaliator</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,8 +15,11 @@
     {{content-for "head-footer"}}
   </head>
   <body>
-    {{content-for "body"}}
-
+    <div class="container">
+      <div class="row">
+        {{content-for "body"}}
+      </div>
+    </div>
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/belo-avaliator.js"></script>
 

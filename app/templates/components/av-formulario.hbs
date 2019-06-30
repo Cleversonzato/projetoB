@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6">
+    <h5>{{titulo}}</h5>
+    <br>
+    <form>
+      <div>  {{erro}}  </div>
+      {{yield}}
+      <button type="submit" class="btn btn-primary" {{action "enviar" model}}>{{botao}}</button>
+    </form>
+  </div>
+  <div class="col-sm-3"></div>
+</div>

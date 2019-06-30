@@ -1,0 +1,5 @@
+<AvFormulario @titulo = "Novo modelo de inscrição" @botao="criar" @model={{model}} >
+  <AvInput @tipo="text" @identificador="titulo" @label="Título" @valor={{model.titulo}} @obrigatorio="true" />
+  <AvInput @tipo="text" @identificador="descricao" @label="Descrição" @valor={{model.descricao}} @obrigatorio="false" />
+  <AvInput @tipo="text" @identificador="respostasTemplate" @label="Campos" @valor={{model.respostasTemplate}} @obrigatorio="false" />
+</AvFormulario>
