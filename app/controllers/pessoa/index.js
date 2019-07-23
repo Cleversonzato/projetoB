@@ -16,7 +16,7 @@ actions:{
       atualizar = 2;
     }
 
-    this.get('ajax').request('https://avaliador-beta.herokuapp.com/pessoas/'+this.get("session.data.pessoa")+'/perfis/'+perfil_id, {
+    this.get('ajax').request('https://avaliador-alfa.herokuapp.com/pessoas/'+this.get("session.data.pessoa")+'/perfis/'+perfil_id, {
       method: 'DELETE',
       contentType: 'application/json; charset=UTF-8',
       headers:{

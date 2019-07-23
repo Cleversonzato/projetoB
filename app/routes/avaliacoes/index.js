@@ -12,7 +12,7 @@ queryParams: {
 },
 
   model(params){
-  return this.get('ajax').request(ENV.host +'processos/pessoa/'+this.get("session.data.pessoa"), {
+  return this.get('ajax').request('https://avaliador-alfa.herokuapp.com/' +'processos/pessoa/'+this.get("session.data.pessoa"), {
     method: 'GET',
     headers:{
       Authorization: 'Bearer ' + this.get("session.data.authenticated.access_token")

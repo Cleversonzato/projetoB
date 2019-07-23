@@ -20,7 +20,7 @@ export default Controller.extend({
  },
 
  pegaPessoa: function (aut){
-   this.get('ajax').request('https://avaliador-beta.herokuapp.com/' +'usuarios/usuario?nome=' + aut.nome, {
+   this.get('ajax').request('https://avaliador-alfa.herokuapp.com/' +'usuarios/usuario?nome=' + aut.nome, {
      method: 'GET',
      headers:{
        Authorization: 'Bearer ' + aut.access_token

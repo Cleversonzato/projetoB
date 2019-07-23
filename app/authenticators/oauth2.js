@@ -1,6 +1,5 @@
 import OAuth2PasswordGrantAuthenticator from 'ember-simple-auth/authenticators/oauth2-password-grant';
 import { inject as service } from '@ember/service'
-import ENV from '../config/environment';
 
 export default OAuth2PasswordGrantAuthenticator.extend({
   session: service(),
@@ -9,7 +8,7 @@ export default OAuth2PasswordGrantAuthenticator.extend({
   // },
 
   authenticate(usuario, senha) {
-    return this.get('ajax').request(ENV.host + 'oauth/token', {
+    return this.get('ajax').request('https://avaliador-alfa.herokuapp.com/' + 'oauth/token', {
             method: 'POST',
             contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
             headers:{

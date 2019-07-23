@@ -10,7 +10,7 @@ export default Controller.extend({
     actions:{
       salvar(){
 
-        this.get('ajax').request(' http://localhost:8080/fase/'+ this.model.processo_id, {
+        this.get('ajax').request('https://avaliador-alfa.herokuapp.com/fase/'+ this.model.processo_id, {
           method: 'POST',
           contentType: 'application/json; charset=UTF-8',
           headers:{

@@ -7,7 +7,7 @@ export default Controller.extend({
 
 actions:{
   salvar(){
-    this.get('ajax').request('https://avaliador-beta.herokuapp.com/pessoas/'+this.get("session.data.pessoa")+'/perfis', {
+    this.get('ajax').request('https://avaliador-alfa.herokuapp.com/pessoas/'+this.get("session.data.pessoa")+'/perfis', {
       method: 'PUT',
       contentType: 'application/json; charset=UTF-8',
       headers:{

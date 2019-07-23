@@ -8,7 +8,7 @@ export default Controller.extend({
     actions:{
       salvar(){
 
-        this.get('ajax').request('https://avaliador-beta.herokuapp.com/fase/', {
+        this.get('ajax').request('https://avaliador-alfa.herokuapp.com/fase/', {
           method: 'PUT',
           contentType: 'application/json; charset=UTF-8',
           headers:{
