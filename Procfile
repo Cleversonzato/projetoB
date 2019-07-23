@@ -1,2 +1,8 @@
+rm -rf dist
 npm install 
-web: ember build --environment=production
+ember build --environment=production
+npm install -g surge
+mv dist/index.html dist/200.html
+web: surge dist avaliador-beta
+
+
