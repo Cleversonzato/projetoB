@@ -1,1 +1,1 @@
-web: ember build --environment=production
+web: ember serve --environment=production
