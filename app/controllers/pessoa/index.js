@@ -1,5 +1,6 @@
 import Controller from '@ember/controller';
 import { inject as service } from '@ember/service';
+import ENV from 'BeloAvaliator/config/environment';
 
 export default Controller.extend({
   ajax: service(),
@@ -15,8 +16,8 @@ actions:{
     } else{
       atualizar = 2;
     }
-
-    this.get('ajax').request(' http://localhost:8080/pessoas/'+this.get("session.data.pessoa")+'/perfis/'+perfil_id, {
+    
+    this.get('ajax').request(ENV.host + 'pessoas/'+this.get("session.data.pessoa")+'/perfis/'+perfil_id, {
       method: 'DELETE',
       contentType: 'application/json; charset=UTF-8',
       headers:{

@@ -9,7 +9,7 @@ actions:{
   editar(){
     const {model}  = this.getProperties( 'model');
 
-    this.get('ajax').request(' http://localhost:8080/pessoas', {
+    this.get('ajax').request(ENV.host+ 'pessoas', {
       method: 'PUT',
       contentType: 'application/json; charset=UTF-8',
       headers:{

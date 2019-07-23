@@ -8,7 +8,7 @@ export default Controller.extend({
 actions:{
   salvar(){
 
-    this.get('ajax').request(' http://localhost:8080/pessoas/'+this.get("session.data.pessoa")+'/perfis', {
+    this.get('ajax').request(ENV.host+ 'pessoas/'+this.get("session.data.pessoa")+'/perfis', {
       method: 'POST',
       contentType: 'application/json; charset=UTF-8',
       headers:{

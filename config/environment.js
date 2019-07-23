@@ -45,7 +45,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    // here you can enable a production-specific feature
+      host: 'https://avaliador-beta.herokuapp.com/'
   }
 
   return ENV;
