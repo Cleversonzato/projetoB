@@ -16,7 +16,7 @@ export default Controller.extend({
         atualizar = 2;
       }
 
-      this.get('ajax').request(' http://localhost:8080/processos/'+ processo_id, {
+      this.get('ajax').request('https://avaliador-beta.herokuapp.com/processos/'+ processo_id, {
         method: 'DELETE',
         contentType: 'application/json; charset=UTF-8',
         headers:{

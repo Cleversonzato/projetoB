@@ -9,7 +9,7 @@ actions:{
   editar(){
     const {model}  = this.getProperties( 'model');
 
-    this.get('ajax').request(' http://localhost:8080/processos', {
+    this.get('ajax').request('https://avaliador-beta.herokuapp.com/processos', {
       method: 'PUT',
       contentType: 'application/json; charset=UTF-8',
       headers:{

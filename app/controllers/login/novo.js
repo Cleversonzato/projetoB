@@ -12,7 +12,7 @@ export default Controller.extend({
    salvar(){
      const {nome, senha, cpf, email}  = this.getProperties( 'nome', 'senha', 'cpf', 'email');
 
-     this.get('ajax').request(' http://localhost:8080/usuarios', {
+     this.get('ajax').request('https://avaliador-beta.herokuapp.com/usuarios', {
        method: 'POST',
        contentType: 'application/json; charset=UTF-8',
        data:JSON.stringify({

@@ -1,6 +1,5 @@
 import Controller from '@ember/controller';
 import { inject as service } from '@ember/service';
-import ENV from '../config/environment';
 
 export default Controller.extend({
   session: service(),
@@ -21,7 +20,7 @@ export default Controller.extend({
  },
 
  pegaPessoa: function (aut){
-   this.get('ajax').request(ENV.host +'usuarios/usuario?nome=' + aut.nome, {
+   this.get('ajax').request('https://avaliador-beta.herokuapp.com/' +'usuarios/usuario?nome=' + aut.nome, {
      method: 'GET',
      headers:{
        Authorization: 'Bearer ' + aut.access_token
