@@ -1,1 +1,1 @@
-web: ember s
+web: ember build --environment=production
