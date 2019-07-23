@@ -1,0 +1,21 @@
+<h3>{{model.titulo}}</h3>
+{{#link-to "avaliacoes.avaliacao.fases.editar" model.id}}<button class="btn btn-light btn-sm">Editar</button>{{/link-to}}
+<br>
+<br>
+<div>Descrição: {{model.descricao}}</div>
+<br>
+<div>Posição: {{model.posicao}}</div>
+<br>
+<div>Data de inicio: {{model.dtInicio}}</div>
+<br>
+<div>Data de fim: {{model.dtFim}}</div>
+<br>
+<div>Participantes:</div>
+{{#each model.participantes as |participante|}}
+{{#if participante}}
+  <br>
+  <div>
+    -{{participante.nome}}
+  </div>
+{{/if}}
+{{/each}}

@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6">
+    <h5>Editar Avaliação</h5>
+    <br>
+    <form>
+      <div>{{erro}}</div>
+      {{input type="hidden" id="id" value=model.id }}
+      {{input type="hidden" id="criador" value=model.criador.id }}
+      <div class="form-group">
+        <label for="titulo">Título do Avaliação</label>
+        {{input id="titulo" value=model.titulo class="form-control" required=true}}
+      </div>
+      <div class="form-group">
+        <label for="titulo">Data de inicio</label>
+        {{input type="date" id="dtInicio" value=model.dtInicio class="form-control"}}
+      </div>
+      <div class="form-group">
+        <label for="titulo">Descrição</label>
+        {{input id="descricao" value=model.descricao class="form-control"}}
+      </div>
+
+      <div>
+        <button type="submit" class="btn btn-primary" {{action "editar"}}>Salvar</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-sm-3"></div>
+</div>

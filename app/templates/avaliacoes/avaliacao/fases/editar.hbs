@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6">
+    <h5>Nova fase</h5>
+    <br>
+    <form>
+      <div>{{erro}}</div>
+
+      <div class="form-group">
+        <label for="titulo">Nome</label>
+        {{input id="titulo" class="form-control" value=model.titulo required=true}}
+      </div>
+      <div class="form-group">
+        <label for="titulo">Descrição</label>
+        {{input id="descricao" value=model.descricao class="form-control" }}
+      </div>
+      <div class="form-group">
+        <label for="titulo">Data de inicio</label>
+        {{input type="date" id="dtInicio" value=model.dtInicio class="form-control"}}
+      </div>
+      <div class="form-group">
+        <label for="titulo">Data de fim</label>
+        {{input type="date" id="dtFim" value=model.dtFim class="form-control"}}
+      </div>
+      <div class="form-group">
+        <label for="titulo">Número da fase:</label>
+        {{input id="posicao" value=model.posicao class="form-control" required=true}}
+      </div>
+
+      <div>
+        <button type="submit" class="btn btn-primary" {{action 'salvar'}}>Salvar</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-sm-3"></div>
+</div>

@@ -1,0 +1,27 @@
+<h3>Informações pessoais básicas:</h3>
+<br>
+<br>
+<div>Nome: {{model.nome}}</div>
+<br>
+<div>Sexo: {{model.sexo}}</div>
+<br>
+<div>Data de Nascimento: {{model.dtNascimento}}</div>
+<br>
+<div>CPF: {{model.cpf}}</div>
+<br>
+<div class="row">
+  <div class="col-sm-4">RG: {{model.rg}} </div>
+  <div class="col-sm-4">Data de emissão: {{model.rgData}}</div>
+  <div class="col-sm-4">Orgão emissor: {{model.rgEmissor}}</div>
+</div>
+<br>
+<div>Pis/Pasep: {{model.pisPasep}}</div>
+<br>
+Perfis:
+<br>
+{{#each model.perfils as |perfil|}}
+<div class="row">
+  <div>{{#Link-to "pessoa.perfis" perfil.id}} {{perfil.titulo}} {{/Link-to}}</div>
+  <button class="btn btn-light btn-sm" {{action "excluir" perfil.id}}>x</button>
+</div>
+{{/each}}
