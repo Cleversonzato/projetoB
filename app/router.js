@@ -11,10 +11,26 @@ Router.map(function() {
     this.route('novo');
   });
 
-  this.route('oportunidades', function() {
-    this.route('oportunidade');
+  this.route('pessoa', function() {
+    this.route('editar');
+    this.route('perfis', function() {
+      this.route('index',{path:'/:perfil_id'});
+      this.route('novo');
+      this.route('editar', {path:'editar/:perfil_id'});
+    });
   });
-  this.route('pessoa');
+  this.route('avaliacoes', function() {
+    this.route('nova');
+    this.route('editar', {path:'editar/:processo_id'} );
+
+    this.route('avaliacao', function() {
+      this.route('fases', function() {
+        this.route('nova', {path:'nova/:processo_id'});
+        this.route('show',{path:'show/:fase_id'});
+        this.route('editar', {path:'editar/:fase_id'} );
+      });
+    });
+  });
 });
 
 export default Router;

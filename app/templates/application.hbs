@@ -8,21 +8,34 @@
       {{#navbar.nav as |nav|}}
         {{#nav.item}}
           {{#nav.dropdown as |dd|}}
-            {{#dd.toggle}}Dados Pessoais<span class="caret"></span>{{/dd.toggle}}
+            {{#dd.toggle}}Informações Pessoais<span class="caret"></span>{{/dd.toggle}}
             {{#dd.menu as |ddm|}}
-              {{#ddm.item}}{{#ddm.link-to "pessoa"}}Informações{{/ddm.link-to}}{{/ddm.item}}
+              {{#ddm.item}}{{#ddm.link-to "pessoa.index"}}Informações{{/ddm.link-to}}{{/ddm.item}}
+              {{#ddm.item}}{{#ddm.link-to "pessoa.editar"}}Editar informações{{/ddm.link-to}}{{/ddm.item}}
+              {{#ddm.item}}{{#ddm.link-to "pessoa.perfis.novo"}}Novo Perfil{{/ddm.link-to}}{{/ddm.item}}
             {{/dd.menu}}
           {{/nav.dropdown}}
         {{/nav.item}}
         {{#nav.item}}
           {{#nav.dropdown as |da|}}
-            {{#da.toggle}}Avaliação{{/da.toggle}}
+            {{#da.toggle}}Minhas Avaliações{{/da.toggle}}
             {{#da.menu as |dda|}}
-              {{#dda.item}}{{#dda.link-to "avaliacoes.nova"}}Nova{{/dda.link-to}}{{/dda.item}}
-              {{#dda.item}}{{#dda.link-to "avaliacoes"}}Ver minhas avaliações{{/dda.link-to}}{{/dda.item}}
+              {{#dda.item}}{{#dda.link-to "avaliacoes.index"}}Ver minhas avaliações{{/dda.link-to}}{{/dda.item}}
+              {{#dda.item}}{{#dda.link-to "avaliacoes.nova"}}Nova avaliação{{/dda.link-to}}{{/dda.item}}
             {{/da.menu}}
           {{/nav.dropdown}}
         {{/nav.item}}
+        {{#nav.item}}
+          {{#nav.dropdown as |da|}}
+            {{#da.toggle}}Avaliações que participo{{/da.toggle}}
+            {{#da.menu as |dda|}}
+              {{#dda.item}}{{#dda.link-to ""}}Buscar avaliação{{/dda.link-to}}{{/dda.item}}
+              {{#dda.item}}{{#dda.link-to ""}}Avaliações que participo{{/dda.link-to}}{{/dda.item}}
+
+            {{/da.menu}}
+          {{/nav.dropdown}}
+        {{/nav.item}}
+
       {{/navbar.nav}}
     {{/navbar.content}}
     <div class="caret col-sm-1"> {{#link-to "pessoa"}}<h4> {{session.data.authenticated.nome}} </h4>{{/link-to}}</div>

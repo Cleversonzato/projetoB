@@ -1,1 +1,31 @@
-As avaliações criadas pela pessoa ficarão aqui
+<h3>Avaliações:</h3>
+<br>
+<br>
+<div>
+  {{#each model as |processo|}}
+    <div>
+      {{#link-to "avaliacoes.editar" processo.id}}<button class="btn btn-light btn-sm">Editar</button>{{/link-to}}
+      <button class="btn btn-light btn-sm" {{action "excluir" processo.id}}>x</button>
+    </div>
+    <div>Processo: {{processo.titulo}} </div>
+    <br>
+    <div>Data de início: {{processo.dtInicio}} </div>
+    <br>
+    <div>Descrição: {{processo.descricao}} </div>
+    <br>
+       {{#link-to "avaliacoes.avaliacao.fases.nova" processo.id}}<button class="btn btn-light btn-sm"  >Adicionar fase</button>{{/link-to}}
+      {{#each processo.fases as |fase|}}
+      {{#if fase}}
+        <br>
+        <div>
+          <div>
+            {{#link-to "avaliacoes.avaliacao.fases.show" fase.id}}- {{fase.titulo}} {{/link-to}}
+            <button class="btn btn-light btn-sm" {{action "excluirFase" fase.id}}>x</button>
+          </div>
+        </div>
+      {{/if}}
+      {{/each}}
+      <br>
+      -----------
+  {{/each}}
+</div>

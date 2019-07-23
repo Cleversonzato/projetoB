@@ -6,6 +6,7 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
+    host: 'http://localhost:8080/', //por algum motivo não foi possível usar esta var no login novo e index -> (controllers?) mudar manualmente se necessário
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

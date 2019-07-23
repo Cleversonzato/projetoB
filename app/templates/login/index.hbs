@@ -4,7 +4,7 @@
     <h5>Login</h5>
     <br>
     <form {{action "logar" on="submit"}}>
-      <div>{{erro.responseJSON.error_description}}</div>
+      <div>{{erro}}</div>
       <div class="form-group">
         <label for="identification">Usuário</label>
         {{input id="identification" value=identification class="form-control"}}

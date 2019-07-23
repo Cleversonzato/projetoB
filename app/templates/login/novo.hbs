@@ -1,6 +1,30 @@
-<AvFormulario @titulo = "Novo usuário" @botao="salvar" @model={{model}} @posEnviar={{action "posEnviar"}} >
-  <AvInput @tipo="text" @identificador="clientId" @label="Usuário" @valor={{model.clientId}} @obrigatorio="true" />
-  <AvInput @tipo="password" @identificador="clientSecret" @label="Senha" @valor={{model.clientSecret}} @obrigatorio="true" />
-  <AvInput @tipo="text" @identificador="cpf" @label="cpf" @valor={{model.cpf}} />
-  <AvInput @tipo="email" @identificador="email" @label="E-mail" @valor={{model.email}} />
-</AvFormulario>
+<div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6">
+    <h5>Novo Usuário</h5>
+    <br>
+    <form {{action "salvar" on="submit"}}>
+      <div>{{erro}}</div>
+      <div class="form-group">
+        <label for="identification">Nome de Usuário:</label>
+        {{input id="nome" value=nome class="form-control" required=true}}
+      </div>
+      <div class="form-group">
+        <label for="password">Senha:</label>
+        {{input id="senha" type="senha" value=senha class="form-control" required=true}}
+      </div>
+      <div class="form-group">
+        <label for="identification">CPF:</label>
+        {{input id="cpf" value=cpf class="form-control" required=true}}
+      </div>
+      <div class="form-group">
+        <label for="identification">E-mail:</label>
+        {{input id="email" value=email class="form-control" required=true}}
+      </div>
+      <div>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-sm-3"></div>
+</div>
