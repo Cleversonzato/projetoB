@@ -21,7 +21,7 @@ export default OAuth2PasswordGrantAuthenticator.extend({
   },
 
   invalidate(data) {
-    this.get('ajax').request(ENV.host + 'oauth/logout'), {method: 'GET'};
+    this.get('ajax').request('https://avaliador-alfa.herokuapp.com/' + 'oauth/logout'), {method: 'GET'};
 
     return this._super(data);
   }
