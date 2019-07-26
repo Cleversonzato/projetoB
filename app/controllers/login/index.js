@@ -10,7 +10,7 @@ export default Controller.extend({
      let { identification, password } = this.getProperties('identification', 'password');
      this.get('session').authenticate('authenticator:oauth2', identification, password)
         .then(()=>{
-            this.pegaPessoa(this.get("session.data.authenticated"));
+            this.pegaPessoa(await this.get("session.data.authenticated"));
             this.transitionToRoute('pessoa.index'); },
         (reason) => {this.set('erro', reason.error || reason);
      });
