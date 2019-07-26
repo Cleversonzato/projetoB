@@ -6,11 +6,11 @@ export default Controller.extend({
   ajax: service(),
 
   actions: {
-    logar() {
+    async logar() {
      let { identification, password } = this.getProperties('identification', 'password');
-     this.get('session').authenticate('authenticator:oauth2', identification, password)
+     await this.get('session').authenticate('authenticator:oauth2', identification, password)
         .then(()=>{
-            this.pegaPessoa(await this.get("session.data.authenticated"));
+            this.pegaPessoa(this.get("session.data.authenticated"));
             this.transitionToRoute('pessoa.index'); },
         (reason) => {this.set('erro', reason.error || reason);
      });
@@ -18,7 +18,7 @@ export default Controller.extend({
  },
 
  pegaPessoa: function (aut){
-   this.get('ajax').request('https://avaliador-alfa.herokuapp.com/usuarios/usuario?nome=' + aut.nome, {
+    this.get('ajax').request('https://avaliador-alfa.herokuapp.com/usuarios/usuario?nome=' + aut.nome, {
      method: 'GET',
      headers:{
        Authorization: 'Bearer ' + aut.access_token
